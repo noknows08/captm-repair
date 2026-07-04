@@ -209,11 +209,17 @@ p{ margin:0 0 1em; }
 }
 .btn:hover{ text-decoration:none; transform:translateY(-1px); }
 .btn-primary{
-  background:var(--accent);
+  background:linear-gradient(180deg, #11809e, var(--accent));
   color:#fff;
-  box-shadow:0 1px 2px rgba(22,38,45,.12);
+  box-shadow:0 1px 2px rgba(22,38,45,.12), inset 0 1px 0 rgba(255,255,255,.14);
 }
-.btn-primary:hover{ background:var(--accent-ink); box-shadow:0 8px 20px -10px rgba(14,116,144,.5); color:#fff; }
+.btn-primary:hover{ background:linear-gradient(180deg, var(--accent), var(--accent-ink)); box-shadow:0 8px 20px -10px rgba(14,116,144,.55); color:#fff; }
+.btn:active{ transform:translateY(0); }
+.btn-arrow::after{
+  content:"→";
+  transition:transform .18s ease;
+}
+.btn-arrow:hover::after{ transform:translateX(3px); }
 .btn-ghost{
   color:var(--ink);
   border-color:var(--line);
@@ -221,6 +227,11 @@ p{ margin:0 0 1em; }
 }
 .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
 .head-cta{ padding:.6em 1.1em; font-size:.82rem; }
+.head-nav a.head-cta{
+  font-family:var(--f-body); font-size:.85rem; font-weight:600;
+  letter-spacing:.01em; text-transform:none; color:#fff;
+}
+.head-nav a.head-cta:hover{ color:#fff; }
 @media (max-width:760px){ .head-nav a:not(.head-cta){ display:none; } }
 
 /* ---------- hero ---------- */
@@ -425,6 +436,32 @@ p{ margin:0 0 1em; }
 .why-list b{ color:var(--ink); font-weight:620; display:block; }
 .why-list span{ color:var(--muted); font-size:.93rem; }
 
+/* ---------- gallery ---------- */
+.gal-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(min(300px,100%),1fr));
+  gap:1rem;
+}
+.gal-item{
+  margin:0; position:relative; overflow:hidden;
+  border-radius:var(--rad);
+  border:1px solid var(--line);
+  background:var(--surface);
+}
+.gal-item img{
+  display:block; width:100%; aspect-ratio:4/3; object-fit:cover;
+  transition:transform .35s ease;
+}
+.gal-item:hover img{ transform:scale(1.04); }
+.gal-cap{
+  position:absolute; inset:auto 0 0 0;
+  padding:1.6rem .9rem .7rem;
+  background:linear-gradient(180deg, transparent, rgba(22,38,45,.8));
+  color:#fff;
+  font-family:var(--f-mono); font-size:.62rem; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase;
+}
+
 /* ---------- contact ---------- */
 .contact-panel{
   background:var(--ink);
@@ -544,6 +581,7 @@ p{ margin:0 0 1em; }
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#why">Why us</a>
+      <a href="#gallery">Gallery</a>
       <a class="btn btn-primary head-cta" href="#contact">Book a repair</a>
     </nav>
   </div>
@@ -563,7 +601,7 @@ p{ margin:0 0 1em; }
           computer handed back working. That's the whole business.
         </p>
         <div class="hero-cta-row">
-          <a class="btn btn-primary" href="#contact">Get a free quote</a>
+          <a class="btn btn-primary btn-arrow" href="#contact">Get a free quote</a>
           <a class="btn btn-ghost" href="#services">See all 10 services</a>
         </div>
         <p class="hero-note">Diagnosis first, price before any work — <b>always</b>.</p>
@@ -851,6 +889,44 @@ p{ margin:0 0 1em; }
     </div>
   </section>
 
+  <!-- ============ gallery ============ -->
+  <section class="section" id="gallery" aria-labelledby="gal-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recent work</span>
+        <h2 id="gal-h">Straight from the bench.</h2>
+        <p>Service work as it actually happens — the newest photos are posted here
+           straight from the workshop.</p>
+      </div>
+      <div class="gal-grid" id="gal-grid">
+        <figure class="gal-item reveal">
+          <img src="assets/laptop-repair.jpg" loading="lazy" alt="Open laptop on the bench during a board-level repair">
+          <figcaption class="gal-cap">Laptop board service</figcaption>
+        </figure>
+        <figure class="gal-item reveal dl1">
+          <img src="assets/ram-upgrade.jpg" loading="lazy" alt="RAM memory module being installed into a desktop motherboard">
+          <figcaption class="gal-cap">Memory upgrade</figcaption>
+        </figure>
+        <figure class="gal-item reveal dl2">
+          <img src="assets/deep-cleaning.jpg" loading="lazy" alt="Dust being cleaned out of a desktop CPU heatsink and fans">
+          <figcaption class="gal-cap">Deep cleaning</figcaption>
+        </figure>
+        <figure class="gal-item reveal">
+          <img src="assets/screen-replacement.jpg" loading="lazy" alt="Laptop screen panel being replaced">
+          <figcaption class="gal-cap">Screen replacement</figcaption>
+        </figure>
+        <figure class="gal-item reveal dl1">
+          <img src="assets/network-setup.jpg" loading="lazy" alt="LAN cable being plugged into a Wi-Fi router during network setup">
+          <figcaption class="gal-cap">Network setup</figcaption>
+        </figure>
+        <figure class="gal-item reveal dl2">
+          <img src="assets/finished-build.jpg" loading="lazy" alt="Freshly serviced desktop PC with tidy cable management on the workbench">
+          <figcaption class="gal-cap">Ready for pickup</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ contact ============ -->
   <section class="section" id="contact" aria-labelledby="contact-h">
     <div class="wrap">
@@ -905,6 +981,7 @@ p{ margin:0 0 1em; }
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#why">Why us</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </nav>
     <span class="foot-sig">CAPTM Repair · Davao City</span>
@@ -935,6 +1012,34 @@ p{ margin:0 0 1em; }
     }
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
   for (var j = 0; j < reveals.length; j++) io.observe(reveals[j]);
+})();
+
+/* live gallery: photos uploaded from the admin page appear first */
+(function(){
+  "use strict";
+  var SUPABASE_URL = "https://ypmwaaeqztxadlfxuebk.supabase.co";
+  var SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwbXdhYWVxenR4YWRsZnh1ZWJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwODU3NDAsImV4cCI6MjA5ODY2MTc0MH0.tl7LC9VCNwYN66SIEK2Q_IUrZSOR5yVd5vKRn4isSuM";
+  var grid = document.getElementById("gal-grid");
+  if (!grid || !window.fetch) return;
+  fetch(SUPABASE_URL + "/rest/v1/captm_gallery?select=path,caption&order=created_at.desc&limit=24", {
+    headers: { apikey: SUPABASE_KEY, Authorization: "Bearer " + SUPABASE_KEY }
+  }).then(function(r){ return r.ok ? r.json() : []; }).then(function(rows){
+    if (!rows || !rows.length) return;
+    for (var i = rows.length - 1; i >= 0; i--) {
+      var fig = document.createElement("figure");
+      fig.className = "gal-item";
+      var img = document.createElement("img");
+      img.loading = "lazy";
+      img.src = SUPABASE_URL + "/storage/v1/object/public/captm-gallery/" + encodeURIComponent(rows[i].path);
+      img.alt = rows[i].caption || "Repair work photo";
+      var cap = document.createElement("figcaption");
+      cap.className = "gal-cap";
+      cap.textContent = rows[i].caption || "From the bench";
+      fig.appendChild(img);
+      fig.appendChild(cap);
+      grid.insertBefore(fig, grid.firstChild);
+    }
+  }).catch(function(){});
 })();
 </script>
 </body>
