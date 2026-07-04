@@ -17,7 +17,7 @@ A static website (`index.html` + `assets/` photos) — no build step, no depende
 
 Everything lives in `index.html`. Common edits:
 
-- **Contact details** — search for `0917 000 0000` and `captm.repair@example.com` (placeholders) and replace with the real phone/email.
+- **Contact details** — search for `0926 376 4160` or `bibisheila08@gmail.com` to change the phone/email (each appears in the contact buttons and the contact card list).
 - **Service descriptions** — search for the service name (e.g. `PC Reformatting`).
 
 ## Deploying
