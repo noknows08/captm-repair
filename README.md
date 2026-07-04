@@ -6,9 +6,9 @@ Business website for **CAPTM Repair** — PC & laptop repair services in Davao C
 
 ## About
 
-A single-file static website (`index.html`) — no build step, no dependencies. Everything is inlined:
+A static website (`index.html` + `assets/` photos) — no build step, no dependencies:
 
-- "Copper & Current" design: a motherboard-at-midnight theme with animated SVG illustrations (open PC tower, diagnostic bench), a BIOS-style boot intro, and copper circuit-trace accents
+- "The Service Bench" design: clean professional light theme with real workbench photography (laptop repair, screen replacement, deep cleaning) and a single steel-teal accent
 - Fonts embedded as base64 (Bricolage Grotesque, Archivo, IBM Plex Mono)
 - All 10 services with custom-drawn SVG icons
 - Fully responsive, keyboard accessible, honors `prefers-reduced-motion`

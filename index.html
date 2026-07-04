@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CAPTM Repair - PC and laptop repair in Davao City: reformatting, deep cleaning, upgrades, screen replacement, data recovery and more. Diagnosis first, price before any work.">
+<meta name="description" content="CAPTM Repair - professional PC and laptop repair in Davao City: reformatting, deep cleaning, upgrades, screen replacement, data recovery and more. Diagnosis first, price before any work.">
 <title>CAPTM Repair — PC &amp; Laptop Services, Davao</title>
 <style>
 /* latin */
@@ -67,30 +67,27 @@
 
 
 /* ============================================================
-   CAPTM REPAIR — "Copper & Current" · a motherboard at midnight
-   Committed single dark world. Petrol-ink ground, copper traces,
-   warm gold, signal cyan, one restrained magenta pulse.
+   CAPTM REPAIR — "The Service Bench"
+   Quiet professional. Cool paper ground, ink text, one steel-teal
+   accent. Real bench photography carries the page.
    ============================================================ */
 
 :root{
-  --ink:        #0a1518;   /* petrol near-black ground        */
-  --ink-2:      #0d1c20;   /* raised panel                    */
-  --ink-3:      #112428;   /* card / board surface            */
-  --line:       #1e3a40;   /* hairline separators             */
-  --copper:     #c87b3d;   /* trace copper                    */
-  --copper-hi:  #e8a468;   /* copper for small text           */
-  --gold:       #f2c164;   /* warm gold pins                  */
-  --cyan:       #45e3d8;   /* signal cyan                     */
-  --cyan-dim:   #2a8f89;
-  --magenta:    #ff4fa3;   /* one restrained pulse            */
-  --text:       #dcebe9;   /* body text                       */
-  --muted:      #94b0ae;   /* secondary text                  */
+  --paper:      #f7f9fa;   /* page ground, cool bias           */
+  --surface:    #ffffff;   /* cards, header                    */
+  --ink:        #16262d;   /* headings, dark band              */
+  --text:       #2c3e46;   /* body text                        */
+  --muted:      #5b6e76;   /* secondary text                   */
+  --line:       #dfe7ea;   /* hairline borders                 */
+  --accent:     #0e7490;   /* steel teal — the one accent      */
+  --accent-ink: #0a5769;   /* accent hover                     */
+  --accent-soft:#e3eff3;   /* accent tint fills                */
   --f-display:  "Bricolage Grotesque","Archivo","Segoe UI",system-ui,sans-serif;
   --f-body:     "Archivo","Segoe UI",system-ui,-apple-system,sans-serif;
   --f-mono:     "IBM Plex Mono","Cascadia Mono","Consolas",ui-monospace,monospace;
-  --rad:        14px;
-  --maxw:       1180px;
-  color-scheme: dark;
+  --rad:        12px;
+  --maxw:       1140px;
+  color-scheme: light;
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -99,35 +96,30 @@ html{ scroll-behavior:smooth; }
 
 body{
   margin:0;
-  background:var(--ink);
-  background-image:
-    radial-gradient(1100px 520px at 78% -8%, rgba(69,227,216,.06), transparent 60%),
-    radial-gradient(900px 600px at -10% 24%, rgba(200,123,61,.07), transparent 55%),
-    radial-gradient(800px 500px at 108% 58%, rgba(255,79,163,.05), transparent 55%),
-    radial-gradient(700px 460px at -8% 92%, rgba(69,227,216,.05), transparent 55%);
+  background:var(--paper);
   color:var(--text);
   font-family:var(--f-body);
   font-size:16.5px;
-  line-height:1.62;
+  line-height:1.65;
   overflow-x:hidden;
 }
 
 img,svg{ max-width:100%; height:auto; }
 
-::selection{ background:var(--copper); color:var(--ink); }
+::selection{ background:var(--accent); color:#fff; }
 
-a{ color:var(--cyan); text-decoration:none; }
+a{ color:var(--accent); text-decoration:none; }
 a:hover{ text-decoration:underline; text-underline-offset:3px; }
 
 :focus-visible{
-  outline:2px solid var(--cyan);
+  outline:2px solid var(--accent);
   outline-offset:3px;
   border-radius:4px;
 }
 
 .skip-link{
   position:fixed; top:-100px; left:12px; z-index:200;
-  background:var(--copper); color:#140b04;
+  background:var(--ink); color:#fff;
   font-family:var(--f-mono); font-size:.72rem; font-weight:600;
   letter-spacing:.14em; text-transform:uppercase;
   padding:.75em 1.2em; border-radius:8px;
@@ -137,88 +129,44 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
 
 h1,h2,h3{
   font-family:var(--f-display);
-  font-weight:750;
-  line-height:1.06;
+  font-weight:640;
+  line-height:1.1;
   letter-spacing:-.015em;
   margin:0 0 .5em;
-  color:#f2faf8;
+  color:var(--ink);
+  text-wrap:balance;
 }
-h1{ font-size:clamp(2.35rem, 6.2vw, 4.4rem); }
-h2{ font-size:clamp(1.7rem, 3.6vw, 2.6rem); }
-h3{ font-size:1.12rem; font-weight:650; letter-spacing:0; }
+h1{ font-size:clamp(2.2rem, 5.4vw, 3.7rem); }
+h2{ font-size:clamp(1.6rem, 3.2vw, 2.3rem); }
+h3{ font-size:1.1rem; font-weight:620; letter-spacing:-.005em; }
 p{ margin:0 0 1em; }
 
 .wrap{ width:min(var(--maxw), 100% - 2.5rem); margin-inline:auto; }
 
-/* mono BIOS-style labels */
-.post-label{
+/* mono eyebrow labels */
+.eyebrow{
   font-family:var(--f-mono);
-  font-size:.72rem;
+  font-size:.7rem;
   font-weight:600;
   letter-spacing:.22em;
   text-transform:uppercase;
-  color:var(--copper-hi);
+  color:var(--accent);
   display:inline-flex;
   align-items:center;
   gap:.6em;
   margin-bottom:1.1rem;
 }
-.post-label::before{
+.eyebrow::before{
   content:"";
   width:22px; height:2px;
-  background:linear-gradient(90deg, var(--copper), var(--gold));
+  background:var(--accent);
   border-radius:2px;
 }
-
-/* ---------- boot / POST overlay ---------- */
-#cc-boot{
-  display:none;
-  position:fixed; inset:0; z-index:120;
-  background:var(--ink);
-  align-items:center; justify-content:center;
-  transition:opacity .55s ease;
-}
-#cc-boot.on{ display:flex; }
-#cc-boot.off{ opacity:0; pointer-events:none; }
-.boot-card{
-  font-family:var(--f-mono);
-  font-size:clamp(.72rem, 2.6vw, .88rem);
-  color:var(--muted);
-  width:min(460px, 88vw);
-}
-.boot-head{
-  color:var(--gold);
-  letter-spacing:.18em;
-  margin-bottom:1.1em;
-}
-.boot-row{
-  display:flex; gap:.6em; align-items:baseline;
-  opacity:.14;
-  padding:.22em 0;
-  transition:opacity .25s ease;
-}
-.boot-row.done{ opacity:1; }
-.boot-row .dots{
-  flex:1;
-  border-bottom:1px dotted var(--line);
-  transform:translateY(-4px);
-}
-.boot-row .stat{ color:var(--cyan); visibility:hidden; letter-spacing:.1em; }
-.boot-row.done .stat{ visibility:visible; }
-.boot-row.done .stat.hot{ color:var(--magenta); }
-.boot-cursor{
-  display:inline-block; width:.62em; height:1.05em;
-  background:var(--copper);
-  vertical-align:text-bottom;
-  animation:blink .9s steps(1) infinite;
-  margin-top:.9em;
-}
-@keyframes blink{ 50%{ opacity:0; } }
 
 /* ---------- header ---------- */
 .site-head{
   position:sticky; top:0; z-index:60;
-  background:rgba(10,21,24,.86);
+  background:rgba(255,255,255,.92);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
@@ -229,14 +177,14 @@ p{ margin:0 0 1em; }
 .brand{
   display:inline-flex; align-items:center; gap:.7rem;
   font-family:var(--f-display);
-  font-weight:750; font-size:1.14rem;
-  color:#f2faf8; letter-spacing:-.01em;
+  font-weight:700; font-size:1.14rem;
+  color:var(--ink); letter-spacing:-.01em;
 }
 .brand:hover{ text-decoration:none; }
 .brand small{
   font-family:var(--f-mono); font-weight:600;
-  font-size:.58rem; letter-spacing:.24em;
-  color:var(--copper-hi);
+  font-size:.56rem; letter-spacing:.24em;
+  color:var(--muted);
   display:block; margin-top:.15em;
 }
 .head-nav{
@@ -244,57 +192,47 @@ p{ margin:0 0 1em; }
   display:flex; align-items:center; gap:1.5rem;
 }
 .head-nav a{
-  font-family:var(--f-mono); font-size:.72rem; font-weight:600;
-  letter-spacing:.18em; text-transform:uppercase;
+  font-family:var(--f-mono); font-size:.7rem; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase;
   color:var(--muted);
 }
-.head-nav a:hover{ color:var(--cyan); text-decoration:none; }
+.head-nav a:hover{ color:var(--accent); text-decoration:none; }
 .btn{
   display:inline-flex; align-items:center; gap:.55em;
-  font-family:var(--f-mono); font-weight:600;
-  font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
-  padding:.85em 1.5em;
+  font-family:var(--f-body); font-weight:600;
+  font-size:.92rem; letter-spacing:.01em;
+  padding:.8em 1.5em;
   border-radius:9px;
   border:1px solid transparent;
   cursor:pointer;
-  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
 }
-.btn:hover{ text-decoration:none; transform:translateY(-2px); }
+.btn:hover{ text-decoration:none; transform:translateY(-1px); }
 .btn-primary{
-  background:linear-gradient(120deg, var(--copper), #a75f28);
-  color:#140b04;
-  box-shadow:0 0 0 1px rgba(232,164,104,.45), 0 8px 26px -10px rgba(200,123,61,.65);
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 1px 2px rgba(22,38,45,.12);
 }
-.btn-primary:hover{ box-shadow:0 0 0 1px var(--gold), 0 12px 30px -10px rgba(242,193,100,.55); }
+.btn-primary:hover{ background:var(--accent-ink); box-shadow:0 8px 20px -10px rgba(14,116,144,.5); color:#fff; }
 .btn-ghost{
-  color:var(--cyan);
-  border-color:var(--cyan-dim);
-  background:rgba(69,227,216,.05);
+  color:var(--ink);
+  border-color:var(--line);
+  background:var(--surface);
 }
-.btn-ghost:hover{ background:rgba(69,227,216,.12); }
-.head-cta{ padding:.65em 1.15em; font-size:.68rem; }
+.btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+.head-cta{ padding:.6em 1.1em; font-size:.82rem; }
 @media (max-width:760px){ .head-nav a:not(.head-cta){ display:none; } }
 
 /* ---------- hero ---------- */
-.hero{ position:relative; padding:4.2rem 0 4.6rem; overflow:hidden; }
+.hero{ padding:4.4rem 0 4.8rem; background:var(--surface); border-bottom:1px solid var(--line); }
 .hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-  gap:3rem; align-items:center;
+  grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+  gap:3.2rem; align-items:center;
 }
 @media (max-width:880px){
   .hero-grid{ grid-template-columns:1fr; gap:2.4rem; }
-  .hero{ padding-top:2.8rem; }
-}
-.hero-copy{ opacity:0; transform:translateY(20px); transition:opacity .9s ease .2s, transform .9s ease .2s; }
-.powered .hero-copy{ opacity:1; transform:none; }
-.hero h1 .volt{ color:var(--gold); }
-.hero h1 .sig{
-  color:var(--cyan);
-  text-decoration:underline;
-  text-decoration-color:var(--copper);
-  text-decoration-thickness:.085em;
-  text-underline-offset:.13em;
+  .hero{ padding-top:3rem; }
 }
 .hero-sub{
   color:var(--muted);
@@ -304,82 +242,36 @@ p{ margin:0 0 1em; }
 }
 .hero-cta-row{ display:flex; flex-wrap:wrap; gap:.9rem; align-items:center; }
 .hero-note{
-  font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em;
+  font-family:var(--f-mono); font-size:.66rem; letter-spacing:.14em;
   text-transform:uppercase; color:var(--muted);
-  margin-top:1.2rem;
+  margin-top:1.3rem;
 }
-.hero-note b{ color:var(--cyan); font-weight:600; }
+.hero-note b{ color:var(--accent); font-weight:600; }
 
-.hero-rig{ position:relative; }
-.hero-rig svg{ display:block; width:100%; height:auto; filter:drop-shadow(0 24px 50px rgba(0,0,0,.5)); }
-
-/* rig animation parts */
-.hero-glow{ opacity:0; transition:opacity 1.6s ease .35s; }
-.powered .hero-glow{ opacity:1; }
-.fan-g{
-  animation:spin 2.6s linear infinite;
-  animation-play-state:paused;
-  transform-box:fill-box; transform-origin:center;
+.hero-photo{ margin:0; }
+.hero-photo img{
+  display:block; width:100%; height:auto;
+  border-radius:var(--rad);
+  box-shadow:0 18px 44px -22px rgba(22,38,45,.35);
 }
-.fan-g.fast{ animation-duration:1.8s; }
-.powered .fan-g{ animation-play-state:running; }
-@keyframes spin{ to{ transform:rotate(360deg); } }
-.led{ animation:ledpulse 2.2s ease-in-out infinite; }
-.led.d1{ animation-delay:.4s; } .led.d2{ animation-delay:.9s; } .led.d3{ animation-delay:1.3s; }
-@keyframes ledpulse{ 0%,100%{ opacity:.25; } 50%{ opacity:1; } }
-.trace-run{
-  stroke-dasharray:10 150;
-  animation:tracerun 3.4s linear infinite;
+.photo-cap{
+  display:flex; align-items:center; gap:.7em;
+  font-family:var(--f-mono); font-size:.64rem; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted);
+  margin-top:.9rem;
 }
-.trace-run.t2{ animation-delay:1.1s; animation-duration:4.2s; }
-.trace-run.t3{ animation-delay:2s; animation-duration:3s; }
-.trace-run.mag{ animation-duration:5.2s; animation-delay:.6s; }
-@keyframes tracerun{ from{ stroke-dashoffset:160; } to{ stroke-dashoffset:-160; } }
-.ram-bar{ animation:rambar 3.1s ease-in-out infinite; transform-box:fill-box; transform-origin:bottom; }
-.ram-bar.r2{ animation-delay:.7s; } .ram-bar.r3{ animation-delay:1.4s; }
-@keyframes rambar{ 0%,100%{ transform:scaleY(.35); } 55%{ transform:scaleY(1); } }
-
-/* ---------- trace connector between sections ---------- */
-.connector{
-  width:2px; height:96px;
-  margin:0 auto;
-  background:linear-gradient(180deg, transparent, var(--line) 22%, var(--line) 78%, transparent);
-  position:relative;
-}
-.connector::before{
+.photo-cap::before{
   content:"";
-  position:absolute; left:50%; top:0;
-  width:6px; height:14px;
-  transform:translateX(-50%);
-  border-radius:4px;
-  background:var(--cyan);
-  box-shadow:0 0 12px 2px rgba(69,227,216,.55);
-  animation:dropline 3.2s ease-in-out infinite;
-}
-.connector.warm::before{
-  background:var(--copper-hi);
-  box-shadow:0 0 12px 2px rgba(232,164,104,.55);
-  animation-delay:1.2s;
-}
-.connector::after{
-  content:"";
-  position:absolute; left:50%; bottom:-3px;
   width:8px; height:8px; border-radius:50%;
-  transform:translateX(-50%);
-  background:var(--ink);
-  border:2px solid var(--copper);
-}
-@keyframes dropline{
-  0%{ top:-6px; opacity:0; }
-  12%{ opacity:1; }
-  82%{ opacity:1; }
-  100%{ top:calc(100% - 8px); opacity:0; }
+  background:var(--accent);
+  flex:none;
 }
 
 /* ---------- trust strip ---------- */
 .trust{
-  border-block:1px solid var(--line);
-  background:linear-gradient(180deg, rgba(17,36,40,.55), rgba(13,28,32,.35));
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
 }
 .trust-grid{
   display:grid;
@@ -404,13 +296,10 @@ p{ margin:0 0 1em; }
   .trust-cell:nth-child(2){ border-top:1px solid var(--line); }
 }
 .trust-k{
-  font-family:var(--f-mono); font-size:.66rem; font-weight:600;
-  letter-spacing:.2em; text-transform:uppercase;
-  color:var(--cyan);
+  font-family:var(--f-mono); font-size:.64rem; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ink);
 }
-.trust-cell:nth-child(2) .trust-k{ color:var(--gold); }
-.trust-cell:nth-child(3) .trust-k{ color:var(--magenta); }
-.trust-cell:nth-child(4) .trust-k{ color:var(--copper-hi); }
 .trust-cell p{ margin:0; color:var(--muted); font-size:.92rem; }
 
 /* ---------- sections ---------- */
@@ -418,91 +307,87 @@ p{ margin:0 0 1em; }
 .section-head{ max-width:44em; margin-bottom:2.6rem; }
 .section-head p{ color:var(--muted); font-size:1.04rem; }
 
-/* ---------- services : the component grid ---------- */
+/* ---------- services ---------- */
 .svc-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(min(255px,100%), 1fr));
   gap:1rem;
 }
 .svc-card{
-  position:relative;
-  --hue:var(--cyan);
-  --hue-rgb:69,227,216;
-  background:
-    radial-gradient(240px 130px at 88% -8%, rgba(var(--hue-rgb),.12), transparent 62%),
-    linear-gradient(165deg, var(--ink-3), var(--ink-2));
+  background:var(--surface);
   border:1px solid var(--line);
   border-radius:var(--rad);
   padding:1.5rem 1.4rem 1.35rem;
-  display:flex; flex-direction:column; gap:.75rem;
-  transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-  overflow:hidden;
+  display:flex; flex-direction:column; gap:.7rem;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-.svc-card::after{ /* solder pads, top-right */
-  content:"";
-  position:absolute; top:14px; right:14px;
-  width:26px; height:6px;
-  background:
-    radial-gradient(circle 3px at 3px 3px, var(--line) 96%, transparent),
-    radial-gradient(circle 3px at 13px 3px, var(--line) 96%, transparent),
-    radial-gradient(circle 3px at 23px 3px, var(--line) 96%, transparent);
-  transition:filter .22s ease;
-}
-.svc-card:nth-child(4n+2){ --hue:var(--gold);      --hue-rgb:242,193,100; }
-.svc-card:nth-child(4n+3){ --hue:var(--magenta);   --hue-rgb:255,79,163; }
-.svc-card:nth-child(4n+4){ --hue:var(--copper-hi); --hue-rgb:232,164,104; }
 .svc-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--hue);
-  box-shadow:0 18px 40px -16px rgba(var(--hue-rgb),.4);
+  transform:translateY(-3px);
+  border-color:var(--accent);
+  box-shadow:0 14px 30px -18px rgba(22,38,45,.25);
 }
-.svc-card:hover::after{ filter:brightness(2.2) hue-rotate(-20deg); }
 .svc-ref{
-  font-family:var(--f-mono); font-size:.62rem; font-weight:600;
-  letter-spacing:.24em; color:var(--hue, var(--copper-hi)); text-transform:uppercase;
+  font-family:var(--f-mono); font-size:.6rem; font-weight:600;
+  letter-spacing:.22em; color:var(--muted); text-transform:uppercase;
 }
 .svc-icon{
-  width:52px; height:52px;
-  color:var(--hue, var(--cyan));
-  transition:color .22s ease, transform .22s ease;
+  width:46px; height:46px;
+  display:grid; place-items:center;
+  background:var(--accent-soft);
+  border-radius:10px;
+  color:var(--accent);
 }
-.svc-card:hover .svc-icon{ transform:scale(1.08); }
-.svc-icon svg{ display:block; width:100%; height:100%; }
+.svc-icon svg{ display:block; width:28px; height:28px; }
 .svc-card h3{ margin:0; }
 .svc-card p{ margin:0; color:var(--muted); font-size:.9rem; line-height:1.55; }
 
-/* ---------- process ---------- */
-.process-band{
-  background:
-    radial-gradient(700px 320px at 92% 0%, rgba(69,227,216,.05), transparent 60%),
-    radial-gradient(600px 300px at 4% 100%, rgba(255,79,163,.045), transparent 60%),
-    linear-gradient(180deg, rgba(13,28,32,.0), rgba(17,36,40,.5) 18%, rgba(17,36,40,.5) 82%, rgba(13,28,32,0));
+/* ---------- photo band ---------- */
+.band{ padding:0 0 4.6rem; }
+.band-fig{ margin:0; position:relative; }
+.band-fig img{
+  display:block; width:100%; height:auto;
+  border-radius:var(--rad);
+  box-shadow:0 18px 44px -24px rgba(22,38,45,.3);
 }
+.band-cap{
+  display:flex; flex-wrap:wrap; gap:.4rem 2rem;
+  justify-content:space-between; align-items:baseline;
+  margin-top:.9rem;
+}
+.band-cap b{
+  font-family:var(--f-display); font-weight:620; font-size:1.02rem;
+  color:var(--ink);
+}
+.band-cap span{
+  font-family:var(--f-mono); font-size:.64rem; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- process ---------- */
+.process-band{ background:var(--surface); border-block:1px solid var(--line); }
 .proc-grid{
   display:grid;
   grid-template-columns:repeat(4, minmax(0,1fr));
   gap:1rem;
   counter-reset:step;
-  position:relative;
 }
 @media (max-width:960px){ .proc-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); } }
 @media (max-width:560px){ .proc-grid{ grid-template-columns:1fr; } }
 .proc-step{
-  background:var(--ink-2);
+  background:var(--paper);
   border:1px solid var(--line);
   border-radius:var(--rad);
   padding:1.6rem 1.4rem;
-  position:relative;
 }
 .proc-step::before{
   counter-increment:step;
   content:"0" counter(step);
-  font-family:var(--f-mono); font-weight:600; font-size:.78rem;
-  letter-spacing:.2em;
-  color:var(--ink);
-  background:linear-gradient(120deg, var(--copper), var(--gold));
+  font-family:var(--f-mono); font-weight:600; font-size:.74rem;
+  letter-spacing:.18em;
+  color:var(--accent);
+  background:var(--accent-soft);
   border-radius:7px;
-  padding:.3em .65em;
+  padding:.34em .7em;
   display:inline-block;
   margin-bottom:1rem;
 }
@@ -510,67 +395,42 @@ p{ margin:0 0 1em; }
 .proc-step p{ margin:0; color:var(--muted); font-size:.92rem; }
 .proc-step em{
   display:block; margin-top:.9rem; font-style:normal;
-  font-family:var(--f-mono); font-size:.64rem; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--cyan);
+  font-family:var(--f-mono); font-size:.62rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent);
 }
 
 /* ---------- why / bench ---------- */
 .why-grid{
   display:grid;
-  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
-  gap:3rem; align-items:center;
+  grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:3.2rem; align-items:center;
 }
 @media (max-width:880px){ .why-grid{ grid-template-columns:1fr; gap:2.2rem; } }
+.why-photo{ margin:0; }
+.why-photo img{
+  display:block; width:100%; height:auto;
+  border-radius:var(--rad);
+  box-shadow:0 18px 44px -24px rgba(22,38,45,.3);
+}
 .why-list{ list-style:none; margin:0 0 1.8rem; padding:0; display:grid; gap:1.05rem; }
 .why-list li{ display:flex; gap:.9rem; align-items:flex-start; }
 .why-pin{
   flex:none; width:34px; height:34px; margin-top:.15rem;
   border-radius:9px;
-  background:rgba(200,123,61,.12);
-  border:1px solid rgba(200,123,61,.4);
+  background:var(--accent-soft);
   display:grid; place-items:center;
-  color:var(--copper-hi);
+  color:var(--accent);
 }
 .why-pin svg{ width:18px; height:18px; display:block; }
-.why-list b{ color:#f2faf8; font-weight:600; display:block; }
+.why-list b{ color:var(--ink); font-weight:620; display:block; }
 .why-list span{ color:var(--muted); font-size:.93rem; }
-.bench-fig{ margin:0; }
-.bench-fig svg{ display:block; width:100%; height:auto; filter:drop-shadow(0 20px 44px rgba(0,0,0,.45)); }
-.bench-cap{
-  font-family:var(--f-mono); font-size:.66rem; letter-spacing:.18em;
-  text-transform:uppercase; color:var(--muted);
-  margin-top:.9rem; text-align:center;
-}
-.scope-beam{
-  stroke-dasharray:6 340;
-  animation:tracerun 2.6s linear infinite;
-}
-.meter-bar{ animation:rambar 2.4s ease-in-out infinite; transform-box:fill-box; transform-origin:bottom; }
-.meter-bar.m2{ animation-delay:.5s; } .meter-bar.m3{ animation-delay:1s; } .meter-bar.m4{ animation-delay:1.5s; }
-.lamp-glow{ animation:ledpulse 4.5s ease-in-out infinite; }
-.solder-spark{ animation:ledpulse 1.6s ease-in-out infinite; }
 
 /* ---------- contact ---------- */
 .contact-panel{
-  position:relative;
-  background:
-    radial-gradient(640px 300px at 85% 0%, rgba(255,79,163,.08), transparent 60%),
-    radial-gradient(700px 340px at 8% 100%, rgba(69,227,216,.08), transparent 60%),
-    linear-gradient(160deg, var(--ink-3), var(--ink-2));
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:clamp(2rem, 5vw, 3.6rem);
-  overflow:hidden;
-}
-.contact-panel::before{ /* corner trace ornament */
-  content:"";
-  position:absolute; top:-1px; right:-1px;
-  width:150px; height:150px;
-  border-top:2px solid var(--copper);
-  border-right:2px solid var(--copper);
-  border-top-right-radius:22px;
-  opacity:.6;
-  pointer-events:none;
+  background:var(--ink);
+  border-radius:18px;
+  padding:clamp(2rem, 5vw, 3.4rem);
+  color:#c9d6db;
 }
 .contact-grid{
   display:grid;
@@ -578,35 +438,40 @@ p{ margin:0 0 1em; }
   gap:2.6rem; align-items:center;
 }
 @media (max-width:820px){ .contact-grid{ grid-template-columns:1fr; } }
-.contact-panel h2{ margin-bottom:.4em; }
-.contact-panel .lead{ color:var(--muted); max-width:32em; }
+.contact-panel h2{ color:#fff; margin-bottom:.4em; }
+.contact-panel .eyebrow{ color:#7fc4d4; }
+.contact-panel .eyebrow::before{ background:#7fc4d4; }
+.contact-panel .lead{ color:#a9bcc3; max-width:32em; }
+.contact-cta-row{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:1.4rem; }
+.contact-panel .btn-ghost{
+  background:transparent; color:#fff; border-color:rgba(255,255,255,.35);
+}
+.contact-panel .btn-ghost:hover{ border-color:#fff; color:#fff; }
 .chan-list{ display:grid; gap:.8rem; }
 .chan{
   display:flex; align-items:center; gap:1rem;
-  background:rgba(10,21,24,.55);
-  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
   border-radius:12px;
   padding:.95rem 1.15rem;
-  color:var(--text);
-  transition:border-color .2s ease, transform .2s ease;
+  color:#e8eef1;
+  transition:border-color .2s ease, background .2s ease;
 }
-.chan:hover{ border-color:var(--cyan-dim); transform:translateX(4px); text-decoration:none; }
+.chan:hover{ border-color:rgba(255,255,255,.45); background:rgba(255,255,255,.08); text-decoration:none; }
 .chan-ico{
   flex:none; width:38px; height:38px; border-radius:10px;
   display:grid; place-items:center;
-  background:rgba(69,227,216,.1); color:var(--cyan);
-  border:1px solid rgba(69,227,216,.3);
+  background:rgba(255,255,255,.08); color:#7fc4d4;
 }
 .chan-ico svg{ width:20px; height:20px; display:block; }
-.chan b{ display:block; font-weight:600; color:#f2faf8; font-size:.98rem; }
+.chan b{ display:block; font-weight:600; color:#fff; font-size:.96rem; }
 .chan span{
-  font-family:var(--f-mono); font-size:.72rem; letter-spacing:.08em; color:var(--muted);
+  font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; color:#a9bcc3;
 }
 .chan-note{
-  font-family:var(--f-mono); font-size:.64rem; letter-spacing:.14em;
-  text-transform:uppercase; color:var(--muted); margin-top:.9rem;
+  font-family:var(--f-mono); font-size:.62rem; letter-spacing:.14em;
+  text-transform:uppercase; color:#7d939c; margin-top:.9rem;
 }
-.contact-cta-row{ margin-top:1.4rem; }
 
 /* ---------- footer ---------- */
 .site-foot{
@@ -621,20 +486,20 @@ p{ margin:0 0 1em; }
 .foot-in p{ margin:0; color:var(--muted); font-size:.86rem; }
 .foot-nav{ display:flex; gap:1.4rem; flex-wrap:wrap; }
 .foot-nav a{
-  font-family:var(--f-mono); font-size:.68rem; font-weight:600;
+  font-family:var(--f-mono); font-size:.66rem; font-weight:600;
   letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
 }
-.foot-nav a:hover{ color:var(--cyan); text-decoration:none; }
+.foot-nav a:hover{ color:var(--accent); text-decoration:none; }
 .foot-sig{
-  font-family:var(--f-mono); font-size:.62rem; letter-spacing:.18em;
-  text-transform:uppercase; color:var(--copper-hi);
+  font-family:var(--f-mono); font-size:.6rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--muted);
 }
 
 /* ---------- scroll reveal ---------- */
-.reveal{ opacity:0; transform:translateY(20px); transition:opacity .7s ease, transform .7s ease; }
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:none; }
-.reveal.dl1{ transition-delay:.08s; } .reveal.dl2{ transition-delay:.16s; }
-.reveal.dl3{ transition-delay:.24s; } .reveal.dl4{ transition-delay:.32s; }
+.reveal.dl1{ transition-delay:.07s; } .reveal.dl2{ transition-delay:.14s; }
+.reveal.dl3{ transition-delay:.21s; }
 
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
@@ -645,11 +510,7 @@ p{ margin:0 0 1em; }
     transition-duration:.01ms !important;
     transition-delay:0ms !important;
   }
-  #cc-boot{ display:none !important; }
-  .reveal, .hero-copy{ opacity:1 !important; transform:none !important; }
-  .hero-glow{ opacity:1 !important; }
-  .connector::before{ display:none; }
-  .boot-cursor{ animation:none; }
+  .reveal{ opacity:1 !important; transform:none !important; }
 }
 </style>
 </head>
@@ -657,716 +518,424 @@ p{ margin:0 0 1em; }
 
 <noscript>
   <style>
-    #cc-boot{ display:none !important; }
-    .reveal, .hero-copy{ opacity:1 !important; transform:none !important; }
-    .hero-glow{ opacity:1 !important; }
-    .fan-g{ animation-play-state:running !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
   </style>
 </noscript>
 
 <a class="skip-link" href="#top">Skip to content</a>
 
-<!-- ============ POST / boot overlay (activated by JS only) ============ -->
-<div id="cc-boot" role="status" aria-live="polite" aria-label="Site loading">
-  <div class="boot-card">
-    <div class="boot-head">CAPTM BIOS v2.6 — SELF TEST</div>
-    <div class="boot-row"><span>POWER</span><span class="dots"></span><span class="stat">OK</span></div>
-    <div class="boot-row"><span>COOLING / FANS</span><span class="dots"></span><span class="stat">OK</span></div>
-    <div class="boot-row"><span>STORAGE</span><span class="dots"></span><span class="stat">OK</span></div>
-    <div class="boot-row"><span>DISPLAY</span><span class="dots"></span><span class="stat">OK</span></div>
-    <div class="boot-row"><span>CAPTM SERVICES</span><span class="dots"></span><span class="stat hot">ONLINE</span></div>
-    <span class="boot-cursor" aria-hidden="true"></span>
+<!-- ============ header ============ -->
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="CAPTM Repair — home">
+      <!-- logo mark: a chip with a C-trace -->
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true">
+        <rect x="6" y="6" width="26" height="26" rx="6" fill="none" stroke="#16262d" stroke-width="1.8"/>
+        <path d="M25 13.5h-6.5a6 6 0 0 0 0 11H25" fill="none" stroke="#0e7490" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="25" cy="13.5" r="2" fill="#0e7490"/>
+        <circle cx="25" cy="24.5" r="2" fill="#0e7490"/>
+        <g stroke="#8aa0a8" stroke-width="1.6" stroke-linecap="round">
+          <path d="M12 2v4M19 2v4M26 2v4M12 32v4M19 32v4M26 32v4M2 12h4M2 19h4M2 26h4M32 12h4M32 19h4M32 26h4"/>
+        </g>
+      </svg>
+      <span>CAPTM Repair<small>DAVAO CITY · PH</small></span>
+    </a>
+    <nav class="head-nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why us</a>
+      <a class="btn btn-primary head-cta" href="#contact">Book a repair</a>
+    </nav>
   </div>
-</div>
+</header>
 
-<div id="cc-page">
+<main id="top">
 
-  <!-- ============ header ============ -->
-  <header class="site-head">
-    <div class="wrap head-in">
-      <a class="brand" href="#top" aria-label="CAPTM Repair — home">
-        <!-- logo mark: a chip with a copper C-trace -->
-        <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
-          <rect x="6" y="6" width="26" height="26" rx="6" fill="#112428" stroke="#c87b3d" stroke-width="1.6"/>
-          <path d="M25 13.5h-6.5a6 6 0 0 0 0 11H25" fill="none" stroke="#45e3d8" stroke-width="2.4" stroke-linecap="round"/>
-          <circle cx="25" cy="13.5" r="2" fill="#f2c164"/>
-          <circle cx="25" cy="24.5" r="2" fill="#f2c164"/>
-          <g stroke="#c87b3d" stroke-width="1.6" stroke-linecap="round">
-            <path d="M12 2v4M19 2v4M26 2v4M12 32v4M19 32v4M26 32v4M2 12h4M2 19h4M2 26h4M32 12h4M32 19h4M32 26h4"/>
-          </g>
-        </svg>
-        <span>CAPTM Repair<small>DAVAO CITY · PH</small></span>
-      </a>
-      <nav class="head-nav" aria-label="Main">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#why">Why us</a>
-        <a class="btn btn-primary head-cta" href="#contact">Book a repair</a>
-      </nav>
+  <!-- ============ hero ============ -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">PC &amp; laptop service · Davao City</span>
+        <h1 id="hero-h">Your machine, back online — and running like new.</h1>
+        <p class="hero-sub">
+          Slow boots, dead screens, overheating fans, mystery crashes — bring it in
+          or have us come to you. One technician, honest diagnostics, and your
+          computer handed back working. That's the whole business.
+        </p>
+        <div class="hero-cta-row">
+          <a class="btn btn-primary" href="#contact">Get a free quote</a>
+          <a class="btn btn-ghost" href="#services">See all 10 services</a>
+        </div>
+        <p class="hero-note">Diagnosis first, price before any work — <b>always</b>.</p>
+      </div>
+
+      <figure class="hero-photo">
+        <img src="assets/laptop-repair.jpg" width="1600" height="1062"
+             alt="Technician repairing an open laptop with a precision screwdriver, motherboard and cooling fan exposed on the workbench">
+        <figcaption class="photo-cap">On the bench · component-level repair</figcaption>
+      </figure>
     </div>
-  </header>
+  </section>
 
-  <main id="top">
+  <!-- ============ trust strip ============ -->
+  <section class="trust" aria-label="Why customers trust CAPTM">
+    <div class="wrap trust-grid">
+      <div class="trust-cell reveal">
+        <span class="trust-k">Same-day diagnostics</span>
+        <p>Most units are opened, tested and diagnosed the day you hand them over.</p>
+      </div>
+      <div class="trust-cell reveal dl1">
+        <span class="trust-k">Quote before work</span>
+        <p>You approve the price first. No surprise charges, no "while we were in there" fees.</p>
+      </div>
+      <div class="trust-cell reveal dl2">
+        <span class="trust-k">Service warranty</span>
+        <p>Every repair is covered by a service warranty. If the same fault returns, so do we.</p>
+      </div>
+      <div class="trust-cell reveal dl3">
+        <span class="trust-k">Home &amp; office visits</span>
+        <p>Can't unplug everything? We do on-site service across Davao City.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- ============ hero ============ -->
-    <section class="hero" aria-labelledby="hero-h">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <span class="post-label">PC &amp; laptop service · Davao City</span>
-          <h1 id="hero-h">Your machine, <span class="sig">back&nbsp;online</span> — and running like it <span class="volt">means&nbsp;it</span>.</h1>
-          <p class="hero-sub">
-            Slow boots, dead screens, mystery crashes, a rig that sounds like a jeepney uphill —
-            bring it in or have us come to you. One technician, honest diagnostics, and your
-            computer handed back working. That's the whole business.
-          </p>
-          <div class="hero-cta-row">
-            <a class="btn btn-primary" href="#contact">Get a free quote</a>
-            <a class="btn btn-ghost" href="#services">See all 10 services</a>
-          </div>
-          <p class="hero-note">Diagnosis first, price before any work — <b>always</b>.</p>
+  <!-- ============ services ============ -->
+  <section class="section" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services · 10 ways we can help</span>
+        <h2 id="svc-h">Every fix on the board.</h2>
+        <p>Ten services, one workshop. Each one done by the same technician who answers your
+           message — no ticket queue, no hand-offs, no jargon you didn't ask for.</p>
+      </div>
+
+      <div class="svc-grid">
+
+        <article class="svc-card reveal">
+          <span class="svc-ref">SVC-01 · OS</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="12" y="12" width="24" height="24" rx="4"/>
+              <path d="M18 6v6M24 6v6M30 6v6M18 36v6M24 36v6M30 36v6M6 18h6M6 24h6M6 30h6M36 18h6M36 24h6M36 30h6" stroke-opacity=".45"/>
+              <path d="M29 20a6.5 6.5 0 1 0 1.5 6.5"/>
+              <path d="M30.5 17.5v4h-4"/>
+            </svg>
+          </span>
+          <h3>PC Reformatting</h3>
+          <p>Full wipe and clean OS reinstall — drivers, updates and essentials set up, bloat left behind. A genuinely fresh start.</p>
+        </article>
+
+        <article class="svc-card reveal dl1">
+          <span class="svc-ref">SVC-02 · THERMAL</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="17"/>
+              <path d="M24 24c-1-6 2-10 6-11-1 5 0 8-2 10zM24 24c6-1 10 2 11 6-5-1-8 0-10-2zM24 24c1 6-2 10-6 11 1-5 0-8 2-10zM24 24c-6 1-10-2-11-6 5 1 8 0 10 2z" stroke-opacity=".45"/>
+              <circle cx="24" cy="24" r="3"/>
+            </svg>
+          </span>
+          <h3>Deep Cleaning (Hardware)</h3>
+          <p>Fans, heatsinks and boards stripped of dust and old paste. Better airflow, lower temps, no more overheating shutdowns.</p>
+        </article>
+
+        <article class="svc-card reveal dl2">
+          <span class="svc-ref">SVC-03 · GPU</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="14" width="36" height="20" rx="4"/>
+              <path d="M10 34v6M38 34v6" stroke-opacity=".45"/>
+              <circle cx="17" cy="24" r="6" stroke-opacity=".45"/>
+              <path d="M31 19l-4 6h6l-4 6"/>
+            </svg>
+          </span>
+          <h3>Game Installation (Triple-A Titles)</h3>
+          <p>Big titles installed and configured properly — GPU drivers current, settings tuned to what your hardware can actually push.</p>
+        </article>
+
+        <article class="svc-card reveal dl3">
+          <span class="svc-ref">SVC-04 · DISPLAY</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="9" width="36" height="24" rx="3"/>
+              <path d="M18 40h12M24 33v7" stroke-opacity=".45"/>
+              <path d="M14 14l6 6-4 3 6 6"/>
+            </svg>
+          </span>
+          <h3>LCD/Screen Replacement</h3>
+          <p>Cracked, flickering or dead panels swapped on laptops and desktop monitors — hinge and cable checked while it's open.</p>
+        </article>
+
+        <article class="svc-card reveal">
+          <span class="svc-ref">SVC-05 · RAM/SSD</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="16" width="32" height="16" rx="3"/>
+              <path d="M13 32v5M20 32v5M27 32v5M34 32v5" stroke-opacity=".45"/>
+              <rect x="13" y="21" width="6" height="6" rx="1" stroke-opacity=".45"/>
+              <rect x="23" y="21" width="6" height="6" rx="1" stroke-opacity=".45"/>
+              <path d="M36 12V5M33 8l3-3 3 3"/>
+            </svg>
+          </span>
+          <h3>Hardware Upgrades</h3>
+          <p>RAM, SSD/HDD, graphics cards and more — matched to your board and budget, fitted and tested before handover.</p>
+        </article>
+
+        <article class="svc-card reveal dl1">
+          <span class="svc-ref">SVC-06 · SOFTWARE</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="10" width="32" height="28" rx="4"/>
+              <path d="M8 18h32" stroke-opacity=".45"/>
+              <circle cx="13" cy="14" r="1.4" fill="currentColor" stroke="none"/>
+              <circle cx="18" cy="14" r="1.4" fill="currentColor" stroke="none"/>
+              <path d="M24 22v9M20 28l4 4 4-4"/>
+            </svg>
+          </span>
+          <h3>Software Installation &amp; Updates</h3>
+          <p>Office tools, antivirus and the updates you keep postponing — installed, licensed correctly, and set to stay current.</p>
+        </article>
+
+        <article class="svc-card reveal dl2">
+          <span class="svc-ref">SVC-07 · NETWORK</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="28" width="32" height="12" rx="3"/>
+              <circle cx="15" cy="34" r="1.6" fill="currentColor" stroke="none"/>
+              <circle cx="21" cy="34" r="1.6" fill="currentColor" stroke="none"/>
+              <path d="M34 28V16" stroke-opacity=".45"/>
+              <path d="M27 14a10 10 0 0 1 14 0"/>
+              <path d="M23 9a16 16 0 0 1 22 0"/>
+            </svg>
+          </span>
+          <h3>Network Setup</h3>
+          <p>Routers configured, LAN cables run and terminated, dead zones and dropouts hunted down until the connection holds.</p>
+        </article>
+
+        <article class="svc-card reveal dl3">
+          <span class="svc-ref">SVC-08 · DATA</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="20" r="13"/>
+              <circle cx="24" cy="20" r="5" stroke-opacity=".45"/>
+              <circle cx="24" cy="20" r="1.5" fill="currentColor" stroke="none"/>
+              <path d="M11 34c0 4 6 6 13 6s13-2 13-6" stroke-opacity=".45"/>
+              <path d="M33 27l7 7M40 29v5h-5"/>
+            </svg>
+          </span>
+          <h3>Data Backup &amp; Recovery</h3>
+          <p>Files secured before any reformat, and lost data recovered where the drive still allows it. Your photos matter more than the OS.</p>
+        </article>
+
+        <article class="svc-card reveal">
+          <span class="svc-ref">SVC-09 · DIAG</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 24h8l4-10 6 20 4-10h14" stroke-opacity=".45"/>
+              <circle cx="33" cy="31" r="8"/>
+              <path d="M39 37l5 5"/>
+            </svg>
+          </span>
+          <h3>Troubleshooting</h3>
+          <p>Random crashes, blue screens, mystery slowdowns — diagnosed to the actual cause, not just rebooted and returned.</p>
+        </article>
+
+        <article class="svc-card reveal dl1">
+          <span class="svc-ref">SVC-10 · I/O</span>
+          <span class="svc-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="20" width="32" height="16" rx="3"/>
+              <path d="M14 20v-6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v6" stroke-opacity=".45"/>
+              <rect x="14" y="26" width="20" height="10" rx="1.5"/>
+              <path d="M18 40v3M30 40v3" stroke-opacity=".45"/>
+            </svg>
+          </span>
+          <h3>Peripheral Support</h3>
+          <p>Printers that won't print, scanners, webcams, mics and the rest — set up, driven correctly, and talking to your PC again.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ photo band : deep cleaning ============ -->
+  <section class="band" aria-label="Inside the workshop">
+    <div class="wrap">
+      <figure class="band-fig reveal">
+        <img src="assets/deep-cleaning.jpg" width="1400" height="930" loading="lazy"
+             alt="Open desktop PC on the bench while dust is cleaned from the CPU heatsink and fans, with RAM sticks and thermal paste laid out on an antistatic mat">
+        <figcaption class="band-cap">
+          <b>Every unit gets the bench. No shortcuts.</b>
+          <span>Bench 01 · deep clean in progress</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ process ============ -->
+  <section class="section process-band" id="process" aria-labelledby="proc-h">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">How a repair flows</span>
+        <h2 id="proc-h">From "it's broken" to "it's back" in four steps.</h2>
+        <p>A repair is a sequence, so we run it like one. You know where your machine is
+           at every step, and nothing happens without your go signal.</p>
+      </div>
+      <div class="proc-grid">
+        <div class="proc-step reveal">
+          <h3>Diagnose</h3>
+          <p>We open it up, run tests, and find the real fault — not the first symptom. You get a plain-language explanation of what's wrong.</p>
+          <em>Usually same-day</em>
         </div>
-
-        <!-- ======== HERO ILLUSTRATION: open tower cutaway ======== -->
-        <div class="hero-rig" role="img" aria-label="Illustration of an open PC tower showing the motherboard, CPU cooler, graphics card, RAM and power supply, with glowing circuit traces and spinning fans">
-          <svg viewBox="0 0 520 560" fill="none">
-            <defs>
-              <linearGradient id="hg-case" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#14282d"/>
-                <stop offset="1" stop-color="#0c191d"/>
-              </linearGradient>
-              <linearGradient id="hg-board" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#123037"/>
-                <stop offset="1" stop-color="#0e2227"/>
-              </linearGradient>
-              <linearGradient id="hg-gpu" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#1a3b42"/>
-                <stop offset="1" stop-color="#12292e"/>
-              </linearGradient>
-              <radialGradient id="hg-glow" cx=".5" cy=".45" r=".65">
-                <stop offset="0" stop-color="#45e3d8" stop-opacity=".22"/>
-                <stop offset=".55" stop-color="#c87b3d" stop-opacity=".1"/>
-                <stop offset="1" stop-color="#c87b3d" stop-opacity="0"/>
-              </radialGradient>
-              <linearGradient id="hg-chip" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#2b1c10"/>
-                <stop offset="1" stop-color="#171009"/>
-              </linearGradient>
-            </defs>
-
-            <!-- ambient power glow (ramps on boot) -->
-            <ellipse class="hero-glow" cx="250" cy="280" rx="250" ry="240" fill="url(#hg-glow)"/>
-
-            <!-- case shell -->
-            <rect x="26" y="22" width="468" height="516" rx="22" fill="url(#hg-case)" stroke="#1e3a40" stroke-width="2"/>
-            <rect x="26" y="22" width="468" height="516" rx="22" stroke="#c87b3d" stroke-opacity=".28" stroke-width="1"/>
-            <!-- power button -->
-            <circle cx="470" cy="48" r="7" fill="#0a1518" stroke="#c87b3d" stroke-width="1.5"/>
-            <circle class="led" cx="470" cy="48" r="3" fill="#45e3d8"/>
-            <!-- case vents -->
-            <g stroke="#1e3a40" stroke-width="2" stroke-linecap="round">
-              <path d="M52 40h60M52 48h60M52 56h44"/>
-            </g>
-
-            <!-- motherboard -->
-            <rect x="56" y="84" width="330" height="418" rx="12" fill="url(#hg-board)" stroke="#c87b3d" stroke-opacity=".45" stroke-width="1.4"/>
-
-            <!-- static copper traces -->
-            <g stroke="#c87b3d" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none">
-              <path d="M84 120h56v58h34"/>
-              <path d="M84 156h32v90"/>
-              <path d="M330 120v54h-40"/>
-              <path d="M356 200v96h-44"/>
-              <path d="M96 420h72v-36"/>
-              <path d="M240 470h96v-64"/>
-              <path d="M120 470v-40h48"/>
-            </g>
-            <g fill="#c87b3d" fill-opacity=".55">
-              <circle cx="84" cy="120" r="3"/><circle cx="84" cy="156" r="3"/>
-              <circle cx="330" cy="120" r="3"/><circle cx="96" cy="420" r="3"/>
-              <circle cx="240" cy="470" r="3"/><circle cx="120" cy="470" r="3"/>
-            </g>
-
-            <!-- LIVE signal traces -->
-            <g fill="none" stroke-width="2.4" stroke-linecap="round">
-              <path class="trace-run" d="M84 120h56v58h34" stroke="#45e3d8"/>
-              <path class="trace-run t2" d="M356 200v96h-44" stroke="#45e3d8"/>
-              <path class="trace-run t3" d="M240 470h96v-64" stroke="#f2c164"/>
-              <path class="trace-run mag" d="M96 420h72v-36" stroke="#ff4fa3"/>
-            </g>
-
-            <!-- CPU socket + cooler -->
-            <rect x="150" y="118" width="120" height="120" rx="10" fill="#0d1c20" stroke="#1e3a40" stroke-width="2"/>
-            <rect x="168" y="136" width="84" height="84" rx="8" fill="url(#hg-chip)" stroke="#c87b3d" stroke-width="1.5"/>
-            <g stroke="#f2c164" stroke-width="2" stroke-linecap="round" stroke-opacity=".8">
-              <path d="M178 118v-8M198 118v-8M218 118v-8M238 118v-8M178 246v-8M198 246v-8M218 246v-8M238 246v-8"/>
-            </g>
-            <circle cx="210" cy="178" r="47" fill="#0a1518" stroke="#c87b3d" stroke-width="2"/>
-            <g class="fan-g">
-              <g fill="#1a3b42" stroke="#45e3d8" stroke-width="1.4">
-                <path d="M210 178 L210 137 A41 41 0 0 1 245 158 Z"/>
-                <path d="M210 178 L245 158 A41 41 0 0 1 245 199 Z"/>
-                <path d="M210 178 L245 199 A41 41 0 0 1 210 219 Z"/>
-                <path d="M210 178 L210 219 A41 41 0 0 1 175 199 Z"/>
-                <path d="M210 178 L175 199 A41 41 0 0 1 175 158 Z"/>
-                <path d="M210 178 L175 158 A41 41 0 0 1 210 137 Z"/>
-              </g>
-            </g>
-            <circle cx="210" cy="178" r="11" fill="#0d1c20" stroke="#f2c164" stroke-width="2"/>
-            <circle class="led d1" cx="210" cy="178" r="4" fill="#f2c164"/>
-
-            <!-- RAM sticks with activity bars -->
-            <g>
-              <rect x="300" y="112" width="16" height="132" rx="4" fill="#12292e" stroke="#c87b3d" stroke-width="1.4"/>
-              <rect x="324" y="112" width="16" height="132" rx="4" fill="#12292e" stroke="#c87b3d" stroke-width="1.4"/>
-              <rect class="ram-bar"    x="304" y="126" width="8" height="104" rx="3" fill="#45e3d8" fill-opacity=".8"/>
-              <rect class="ram-bar r2" x="328" y="126" width="8" height="104" rx="3" fill="#45e3d8" fill-opacity=".8"/>
-              <g stroke="#f2c164" stroke-width="2" stroke-opacity=".7">
-                <path d="M300 250v6M316 250v6M324 250v6M340 250v6"/>
-              </g>
-            </g>
-
-            <!-- GPU card -->
-            <g>
-              <rect x="86" y="296" width="266" height="74" rx="10" fill="url(#hg-gpu)" stroke="#1e3a40" stroke-width="2"/>
-              <rect x="86" y="296" width="266" height="10" rx="5" fill="#ff4fa3" fill-opacity=".55"/>
-              <circle cx="150" cy="336" r="26" fill="#0a1518" stroke="#c87b3d" stroke-width="1.8"/>
-              <g class="fan-g fast">
-                <g fill="#1a3b42" stroke="#e8a468" stroke-width="1.2">
-                  <path d="M150 336 L150 314 A22 22 0 0 1 169 325 Z"/>
-                  <path d="M150 336 L169 325 A22 22 0 0 1 169 347 Z"/>
-                  <path d="M150 336 L169 347 A22 22 0 0 1 150 358 Z"/>
-                  <path d="M150 336 L150 358 A22 22 0 0 1 131 347 Z"/>
-                  <path d="M150 336 L131 347 A22 22 0 0 1 131 325 Z"/>
-                  <path d="M150 336 L131 325 A22 22 0 0 1 150 314 Z"/>
-                </g>
-              </g>
-              <circle cx="150" cy="336" r="6" fill="#0d1c20" stroke="#f2c164" stroke-width="1.6"/>
-              <!-- heatsink fins -->
-              <g stroke="#2a8f89" stroke-width="3" stroke-linecap="round">
-                <path d="M196 314v44M208 314v44M220 314v44M232 314v44M244 314v44M256 314v44"/>
-              </g>
-              <rect x="272" y="318" width="64" height="36" rx="6" fill="#0d1c20" stroke="#1e3a40" stroke-width="1.5"/>
-              <circle class="led d2" cx="286" cy="336" r="3.5" fill="#ff4fa3"/>
-              <circle class="led d3" cx="300" cy="336" r="3.5" fill="#45e3d8"/>
-              <circle class="led"    cx="314" cy="336" r="3.5" fill="#f2c164"/>
-            </g>
-
-            <!-- M.2 drive -->
-            <rect x="96" y="392" width="110" height="22" rx="6" fill="#12292e" stroke="#c87b3d" stroke-width="1.3"/>
-            <circle class="led d2" cx="192" cy="403" r="3.5" fill="#45e3d8"/>
-            <rect x="106" y="398" width="52" height="10" rx="3" fill="#1a3b42" stroke="#2a8f89" stroke-width="1"/>
-
-            <!-- chipset -->
-            <rect x="238" y="386" width="54" height="54" rx="8" fill="url(#hg-chip)" stroke="#c87b3d" stroke-width="1.4"/>
-            <circle class="led" cx="265" cy="413" r="4" fill="#e8a468"/>
-
-            <!-- PSU -->
-            <g>
-              <rect x="398" y="404" width="82" height="98" rx="10" fill="#0d1c20" stroke="#1e3a40" stroke-width="2"/>
-              <g stroke="#2a8f89" stroke-width="2" stroke-linecap="round" stroke-opacity=".8">
-                <path d="M410 424h58M410 436h58M410 448h58M410 460h58M410 472h58"/>
-              </g>
-              <circle class="led d1" cx="439" cy="490" r="3.5" fill="#f2c164"/>
-            </g>
-
-            <!-- drive cage -->
-            <rect x="398" y="84" width="82" height="60" rx="10" fill="#0d1c20" stroke="#1e3a40" stroke-width="2"/>
-            <rect x="408" y="96" width="62" height="14" rx="4" fill="#12292e" stroke="#c87b3d" stroke-opacity=".5"/>
-            <rect x="408" y="118" width="62" height="14" rx="4" fill="#12292e" stroke="#c87b3d" stroke-opacity=".5"/>
-            <circle class="led d3" cx="464" cy="103" r="2.6" fill="#45e3d8"/>
-            <circle class="led d1" cx="464" cy="125" r="2.6" fill="#45e3d8"/>
-
-            <!-- power cables -->
-            <g fill="none" stroke-width="4" stroke-linecap="round">
-              <path d="M400 430 C 360 430, 372 300, 352 300" stroke="#c87b3d" stroke-opacity=".65"/>
-              <path d="M404 452 C 340 470, 320 460, 292 440" stroke="#f2c164" stroke-opacity=".5"/>
-              <path d="M436 404 C 436 330, 420 180, 386 160" stroke="#2a8f89" stroke-opacity=".6"/>
-            </g>
-
-            <!-- BIOS tag -->
-            <text x="66" y="524" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="3" fill="#94b0ae">CAPTM-01 · SERVICE BUILD</text>
-            <circle class="led" cx="372" cy="520" r="3.5" fill="#45e3d8"/>
-          </svg>
+        <div class="proc-step reveal dl1">
+          <h3>Quote</h3>
+          <p>One clear price for parts and labor, before any work starts. Say yes, say no, or ask questions — all fine.</p>
+          <em>You approve first</em>
+        </div>
+        <div class="proc-step reveal dl2">
+          <h3>Repair</h3>
+          <p>The fix itself: careful, documented, using parts you approved. If anything unexpected turns up, we call before touching it.</p>
+          <em>No surprise add-ons</em>
+        </div>
+        <div class="proc-step reveal dl3">
+          <h3>Test &amp; return</h3>
+          <p>Stress-tested, temps checked, everything you use verified working. Then it's back in your hands with a service warranty.</p>
+          <em>Covered after handover</em>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============ trust strip ============ -->
-    <section class="trust" aria-label="Why customers trust CAPTM">
-      <div class="wrap trust-grid">
-        <div class="trust-cell reveal">
-          <span class="trust-k">Same-day diagnostics</span>
-          <p>Most units are opened, tested and diagnosed the day you hand them over.</p>
-        </div>
-        <div class="trust-cell reveal dl1">
-          <span class="trust-k">Quote before work</span>
-          <p>You approve the price first. No surprise charges, no "while we were in there" fees.</p>
-        </div>
-        <div class="trust-cell reveal dl2">
-          <span class="trust-k">Service warranty</span>
-          <p>Every repair is covered by a service warranty. If the same fault returns, so do we.</p>
-        </div>
-        <div class="trust-cell reveal dl3">
-          <span class="trust-k">Home &amp; office visits</span>
-          <p>Can't unplug everything? We do on-site service across Davao City.</p>
-        </div>
+  <!-- ============ why ============ -->
+  <section class="section" id="why" aria-labelledby="why-h">
+    <div class="wrap why-grid">
+      <figure class="why-photo reveal">
+        <img src="assets/screen-replacement.jpg" width="1400" height="930" loading="lazy"
+             alt="Technician carefully lifting a laptop screen panel during a screen replacement, with precision tools on the repair mat">
+        <figcaption class="photo-cap">Screen replacement · handled carefully</figcaption>
+      </figure>
+      <div class="reveal dl1">
+        <span class="eyebrow">The workbench</span>
+        <h2 id="why-h">One technician. Full attention. Your machine.</h2>
+        <ul class="why-list">
+          <li>
+            <span class="why-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+            <div><b>You talk to the person doing the work</b>
+            <span>The one who diagnoses your PC is the one who fixes it and hands it back. Questions get real answers, fast.</span></div>
+          </li>
+          <li>
+            <span class="why-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
+            </span>
+            <div><b>Everything in writing</b>
+            <span>Diagnosis, quote, and what was done — you get it all spelled out, so there's never a "wait, what did I pay for?"</span></div>
+          </li>
+          <li>
+            <span class="why-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+            </span>
+            <div><b>Davao-based, Davao-priced</b>
+            <span>A local shop for local machines — drop off, or book a home or office visit anywhere in the city.</span></div>
+          </li>
+          <li>
+            <span class="why-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </span>
+            <div><b>Honest timelines</b>
+            <span>If a part takes a week to arrive, you hear "a week" — not "soon". Your machine, your schedule, no guessing.</span></div>
+          </li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Ask about your unit</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="connector" aria-hidden="true"></div>
-
-    <!-- ============ services : component grid ============ -->
-    <section class="section" id="services" aria-labelledby="svc-h">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="post-label">Service board · 10 components</span>
-          <h2 id="svc-h">Every fix on the board.</h2>
-          <p>Ten services, one workshop. Each one done by the same technician who answers your
-             message — no ticket queue, no hand-offs, no jargon you didn't ask for.</p>
-        </div>
-
-        <div class="svc-grid">
-
-          <article class="svc-card reveal">
-            <span class="svc-ref">SVC-01 · OS</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="12" y="12" width="24" height="24" rx="4"/>
-                <path d="M18 6v6M24 6v6M30 6v6M18 36v6M24 36v6M30 36v6M6 18h6M6 24h6M6 30h6M36 18h6M36 24h6M36 30h6"/>
-                <path d="M29 20a6.5 6.5 0 1 0 1.5 6.5" stroke="#f2c164"/>
-                <path d="M30.5 17.5v4h-4" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>PC Reformatting</h3>
-            <p>Full wipe and clean OS reinstall — drivers, updates and essentials set up, bloat left behind. A genuinely fresh start.</p>
-          </article>
-
-          <article class="svc-card reveal dl1">
-            <span class="svc-ref">SVC-02 · THERMAL</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="24" cy="24" r="17"/>
-                <path d="M24 24c-1-6 2-10 6-11-1 5 0 8-2 10zM24 24c6-1 10 2 11 6-5-1-8 0-10-2zM24 24c1 6-2 10-6 11 1-5 0-8 2-10zM24 24c-6 1-10-2-11-6 5 1 8 0 10 2z"/>
-                <circle cx="24" cy="24" r="3" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>Deep Cleaning (Hardware)</h3>
-            <p>Fans, heatsinks and boards stripped of dust and old paste. Better airflow, lower temps, no more overheating shutdowns.</p>
-          </article>
-
-          <article class="svc-card reveal dl2">
-            <span class="svc-ref">SVC-03 · GPU</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="6" y="14" width="36" height="20" rx="4"/>
-                <path d="M10 34v6M38 34v6"/>
-                <circle cx="17" cy="24" r="6"/>
-                <path d="M17 18v3M17 27v3M11 24h3M20 24h3"/>
-                <path d="M31 19l-4 6h6l-4 6" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>Game Installation (Triple-A Titles)</h3>
-            <p>Big titles installed and configured properly — GPU drivers current, settings tuned to what your hardware can actually push.</p>
-          </article>
-
-          <article class="svc-card reveal dl3">
-            <span class="svc-ref">SVC-04 · DISPLAY</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="6" y="9" width="36" height="24" rx="3"/>
-                <path d="M18 40h12M24 33v7"/>
-                <path d="M14 14l6 6-4 3 6 6" stroke="#ff4fa3"/>
-                <path d="M28 15h9M28 20h9M28 25h6" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>LCD/Screen Replacement</h3>
-            <p>Cracked, flickering or dead panels swapped on laptops and desktop monitors — hinge and cable checked while it's open.</p>
-          </article>
-
-          <article class="svc-card reveal">
-            <span class="svc-ref">SVC-05 · RAM/SSD</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="16" width="32" height="16" rx="3"/>
-                <path d="M13 32v5M20 32v5M27 32v5M34 32v5"/>
-                <rect x="13" y="21" width="6" height="6" rx="1"/>
-                <rect x="23" y="21" width="6" height="6" rx="1"/>
-                <path d="M36 12V5M33 8l3-3 3 3" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>Hardware Upgrades</h3>
-            <p>RAM, SSD/HDD, graphics cards and more — matched to your board and budget, fitted and benchmarked before handover.</p>
-          </article>
-
-          <article class="svc-card reveal dl1">
-            <span class="svc-ref">SVC-06 · SOFTWARE</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="10" width="32" height="28" rx="4"/>
-                <path d="M8 18h32"/>
-                <circle cx="13" cy="14" r="1.4" fill="currentColor" stroke="none"/>
-                <circle cx="18" cy="14" r="1.4" fill="currentColor" stroke="none"/>
-                <path d="M24 22v9M20 28l4 4 4-4" stroke="#f2c164"/>
-                <path d="M14 34h20" stroke="#ff4fa3" stroke-dasharray="3 3"/>
-              </svg>
-            </span>
-            <h3>Software Installation &amp; Updates</h3>
-            <p>Office tools, antivirus and the updates you keep postponing — installed, licensed correctly, and set to stay current.</p>
-          </article>
-
-          <article class="svc-card reveal dl2">
-            <span class="svc-ref">SVC-07 · NETWORK</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="28" width="32" height="12" rx="3"/>
-                <circle cx="15" cy="34" r="1.6" fill="currentColor" stroke="none"/>
-                <circle cx="21" cy="34" r="1.6" fill="currentColor" stroke="none"/>
-                <path d="M34 28V16"/>
-                <path d="M27 14a10 10 0 0 1 14 0" stroke="#f2c164"/>
-                <path d="M23 9a16 16 0 0 1 22 0" stroke="#f2c164"/>
-              </svg>
-            </span>
-            <h3>Network Setup</h3>
-            <p>Routers configured, LAN cables run and terminated, dead zones and dropouts hunted down until the connection holds.</p>
-          </article>
-
-          <article class="svc-card reveal dl3">
-            <span class="svc-ref">SVC-08 · DATA</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="24" cy="20" r="13"/>
-                <circle cx="24" cy="20" r="5"/>
-                <circle cx="24" cy="20" r="1.5" fill="currentColor" stroke="none"/>
-                <path d="M11 34c0 4 6 6 13 6s13-2 13-6" stroke="#f2c164"/>
-                <path d="M33 27l7 7M40 29v5h-5" stroke="#ff4fa3"/>
-              </svg>
-            </span>
-            <h3>Data Backup &amp; Recovery</h3>
-            <p>Files secured before any reformat, and lost data recovered where the drive still allows it. Your photos matter more than the OS.</p>
-          </article>
-
-          <article class="svc-card reveal">
-            <span class="svc-ref">SVC-09 · DIAG</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 24h8l4-10 6 20 4-10h14" stroke="#f2c164"/>
-                <circle cx="33" cy="31" r="8"/>
-                <path d="M39 37l5 5"/>
-              </svg>
-            </span>
-            <h3>Troubleshooting</h3>
-            <p>Random crashes, blue screens, mystery slowdowns — diagnosed to the actual cause, not just rebooted and returned.</p>
-          </article>
-
-          <article class="svc-card reveal dl1">
-            <span class="svc-ref">SVC-10 · I/O</span>
-            <span class="svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="8" y="20" width="32" height="16" rx="3"/>
-                <path d="M14 20v-6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v6"/>
-                <rect x="14" y="26" width="20" height="10" rx="1.5" stroke="#f2c164"/>
-                <circle cx="36" cy="24" r="1.6" fill="#ff4fa3" stroke="none"/>
-                <path d="M18 40v3M30 40v3"/>
-              </svg>
-            </span>
-            <h3>Peripheral Support</h3>
-            <p>Printers that won't print, scanners, webcams, mics and the rest — set up, driven correctly, and talking to your PC again.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <div class="connector warm" aria-hidden="true"></div>
-
-    <!-- ============ process ============ -->
-    <section class="section process-band" id="process" aria-labelledby="proc-h">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="post-label">Signal path · how a repair flows</span>
-          <h2 id="proc-h">From "it's broken" to "it's back" in four steps.</h2>
-          <p>A repair is a sequence, so we run it like one. You know where your machine is
-             at every step, and nothing happens without your go signal.</p>
-        </div>
-        <div class="proc-grid">
-          <div class="proc-step reveal">
-            <h3>Diagnose</h3>
-            <p>We open it up, run tests, and find the real fault — not the first symptom. You get a plain-language explanation of what's wrong.</p>
-            <em>Usually same-day</em>
-          </div>
-          <div class="proc-step reveal dl1">
-            <h3>Quote</h3>
-            <p>One clear price for parts and labor, before any work starts. Say yes, say no, or ask questions — all fine.</p>
-            <em>You approve first</em>
-          </div>
-          <div class="proc-step reveal dl2">
-            <h3>Repair</h3>
-            <p>The fix itself: careful, documented, using parts you approved. If anything unexpected turns up, we call before touching it.</p>
-            <em>No surprise add-ons</em>
-          </div>
-          <div class="proc-step reveal dl3">
-            <h3>Test &amp; return</h3>
-            <p>Stress-tested, temps checked, everything you use verified working. Then it's back in your hands with a service warranty.</p>
-            <em>Covered after handover</em>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="connector" aria-hidden="true"></div>
-
-    <!-- ============ why / workbench ============ -->
-    <section class="section" id="why" aria-labelledby="why-h">
-      <div class="wrap why-grid">
-        <div class="reveal">
-          <span class="post-label">The workbench</span>
-          <h2 id="why-h">One technician. Full attention. Your machine.</h2>
-          <ul class="why-list">
-            <li>
-              <span class="why-pin" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
-              </span>
-              <div><b>You talk to the person doing the work</b>
-              <span>The one who diagnoses your PC is the one who fixes it and hands it back. Questions get real answers, fast.</span></div>
-            </li>
-            <li>
-              <span class="why-pin" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
-              </span>
-              <div><b>Everything in writing</b>
-              <span>Diagnosis, quote, and what was done — you get it all spelled out, so there's never a "wait, what did I pay for?"</span></div>
-            </li>
-            <li>
-              <span class="why-pin" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
-              </span>
-              <div><b>Davao-based, Davao-priced</b>
-              <span>A local shop for local machines — drop off, or book a home or office visit anywhere in the city.</span></div>
-            </li>
-            <li>
-              <span class="why-pin" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
-              </span>
-              <div><b>Honest timelines</b>
-              <span>If a part takes a week to arrive, you hear "a week" — not "soon". Your machine, your schedule, no guessing.</span></div>
-            </li>
-          </ul>
-          <a class="btn btn-ghost" href="#contact">Ask about your unit</a>
-        </div>
-
-        <!-- ======== SECOND ILLUSTRATION: the diagnostic bench ======== -->
-        <figure class="bench-fig reveal dl1">
-          <svg viewBox="0 0 560 380" fill="none" role="img" aria-label="Illustration of a repair workbench: an open laptop connected to a diagnostic meter showing a live waveform, a lamp, tools and a tray of screws">
-            <defs>
-              <linearGradient id="bg-desk" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#173238"/>
-                <stop offset="1" stop-color="#0e2024"/>
-              </linearGradient>
-              <linearGradient id="bg-screen" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#0f272c"/>
-                <stop offset="1" stop-color="#0a181c"/>
-              </linearGradient>
-              <radialGradient id="bg-lamp" cx=".5" cy="0" r="1">
-                <stop offset="0" stop-color="#f2c164" stop-opacity=".3"/>
-                <stop offset="1" stop-color="#f2c164" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-
-            <!-- lamp -->
-            <g>
-              <path d="M470 40 L410 96" stroke="#1e3a40" stroke-width="5" stroke-linecap="round"/>
-              <path d="M470 40 L500 24" stroke="#1e3a40" stroke-width="5" stroke-linecap="round"/>
-              <circle cx="502" cy="22" r="6" fill="#12292e" stroke="#c87b3d" stroke-width="1.6"/>
-              <path d="M398 92 L426 112 L406 128 Z" fill="#12292e" stroke="#c87b3d" stroke-width="1.6"/>
-              <path class="lamp-glow" d="M404 122 L300 300 L520 300 Z" fill="url(#bg-lamp)"/>
-              <circle class="led" cx="410" cy="112" r="4" fill="#f2c164"/>
-            </g>
-
-            <!-- bench -->
-            <rect x="20" y="296" width="520" height="26" rx="8" fill="url(#bg-desk)" stroke="#c87b3d" stroke-opacity=".4" stroke-width="1.4"/>
-            <path d="M48 322v34M512 322v34" stroke="#1e3a40" stroke-width="8" stroke-linecap="round"/>
-
-            <!-- open laptop, back panel off -->
-            <g>
-              <rect x="60" y="120" width="180" height="112" rx="8" fill="url(#bg-screen)" stroke="#1e3a40" stroke-width="2.4"/>
-              <rect x="70" y="130" width="160" height="92" rx="4" fill="#0a1518" stroke="#2a8f89" stroke-width="1.2"/>
-              <!-- waveform on laptop screen -->
-              <path d="M78 182 h18 l8-26 10 44 10-30 8 12 h20 l8-20 10 30 8-10 h44" stroke="#1e3a40" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path class="scope-beam" d="M78 182 h18 l8-26 10 44 10-30 8 12 h20 l8-20 10 30 8-10 h44" stroke="#45e3d8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="78" y="145" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2" fill="#94b0ae">DIAG RUNNING…</text>
-              <circle class="led d1" cx="222" cy="140" r="3" fill="#ff4fa3"/>
-              <!-- keyboard base -->
-              <path d="M48 232 h204 l16 40 h-236 z" fill="#12292e" stroke="#1e3a40" stroke-width="2.4"/>
-              <rect x="86" y="244" width="128" height="6" rx="3" fill="#1e3a40"/>
-              <rect x="120" y="256" width="60" height="6" rx="3" fill="#1e3a40"/>
-            </g>
-
-            <!-- multimeter / diagnostic box -->
-            <g>
-              <rect x="316" y="180" width="128" height="116" rx="10" fill="#12292e" stroke="#c87b3d" stroke-width="1.8"/>
-              <rect x="328" y="192" width="104" height="52" rx="6" fill="#0a1518" stroke="#1e3a40" stroke-width="1.4"/>
-              <!-- animated meter bars -->
-              <rect class="meter-bar"    x="338" y="200" width="10" height="38" rx="2" fill="#45e3d8"/>
-              <rect class="meter-bar m2" x="356" y="200" width="10" height="38" rx="2" fill="#f2c164"/>
-              <rect class="meter-bar m3" x="374" y="200" width="10" height="38" rx="2" fill="#45e3d8"/>
-              <rect class="meter-bar m4" x="392" y="200" width="10" height="38" rx="2" fill="#e8a468"/>
-              <circle class="led d2" cx="420" cy="206" r="4" fill="#ff4fa3"/>
-              <circle class="led"    cx="420" cy="222" r="4" fill="#45e3d8"/>
-              <!-- dial + buttons -->
-              <circle cx="348" cy="270" r="14" fill="#0a1518" stroke="#c87b3d" stroke-width="2"/>
-              <path d="M348 270 L356 260" stroke="#f2c164" stroke-width="2.4" stroke-linecap="round"/>
-              <rect x="376" y="260" width="18" height="10" rx="3" fill="#1e3a40"/>
-              <rect x="400" y="260" width="18" height="10" rx="3" fill="#1e3a40"/>
-              <!-- probe cable to laptop -->
-              <path d="M316 236 C 290 236, 286 254, 268 254" stroke="#ff4fa3" stroke-width="3" stroke-linecap="round" stroke-opacity=".7"/>
-              <path d="M316 250 C 288 252, 284 270, 264 268" stroke="#45e3d8" stroke-width="3" stroke-linecap="round" stroke-opacity=".7"/>
-            </g>
-
-            <!-- screwdriver -->
-            <g>
-              <path d="M462 262 l30-30" stroke="#94b0ae" stroke-width="4" stroke-linecap="round"/>
-              <path d="M488 234 l14-14" stroke="#c87b3d" stroke-width="8" stroke-linecap="round"/>
-            </g>
-
-            <!-- parts tray with screws -->
-            <rect x="452" y="272" width="76" height="24" rx="6" fill="#0d1c20" stroke="#1e3a40" stroke-width="2"/>
-            <g fill="#f2c164">
-              <circle cx="466" cy="284" r="3"/><circle cx="480" cy="286" r="3"/>
-              <circle cx="494" cy="283" r="3"/><circle cx="508" cy="286" r="3"/>
-            </g>
-
-            <!-- tiny solder sparkle -->
-            <g class="solder-spark" stroke="#f2c164" stroke-width="1.6" stroke-linecap="round">
-              <path d="M292 160 v8M288 164 h8M295 161 l-6 6M289 161 l6 6"/>
-            </g>
-
-            <!-- floor tag -->
-            <text x="60" y="352" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="3" fill="#94b0ae">BENCH 01 · DIAGNOSTICS IN PROGRESS</text>
-          </svg>
-          <figcaption class="bench-cap">Every unit gets the bench. No shortcuts.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <div class="connector warm" aria-hidden="true"></div>
-
-    <!-- ============ contact ============ -->
-    <section class="section" id="contact" aria-labelledby="contact-h">
-      <div class="wrap">
-        <div class="contact-panel reveal">
-          <div class="contact-grid">
-            <div>
-              <span class="post-label">Boot your booking</span>
-              <h2 id="contact-h">Tell us what your machine is doing. We'll tell you what it needs.</h2>
-              <p class="lead">
-                Send a message with the symptoms — even "it just won't turn on" is enough to start.
-                You'll get a straight answer and a free quote before anything is opened.
-              </p>
-              <div class="hero-cta-row contact-cta-row">
-                <a class="btn btn-primary" href="tel:+639170000000">Call · 0917 000 0000</a>
-                <a class="btn btn-ghost" href="mailto:captm.repair@example.com">Email us</a>
-              </div>
-            </div>
-            <div>
-              <div class="chan-list">
-                <a class="chan" href="tel:+639170000000">
-                  <span class="chan-ico" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-                  </span>
-                  <span><b>Call or text</b><span>0917 000 0000</span></span>
-                </a>
-                <a class="chan" href="mailto:captm.repair@example.com">
-                  <span class="chan-ico" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-                  </span>
-                  <span><b>Email</b><span>captm.repair@example.com</span></span>
-                </a>
-                <div class="chan">
-                  <span class="chan-ico" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
-                  </span>
-                  <span><b>Davao City, Philippines</b><span>Drop-off or on-site visits</span></span>
-                </div>
-              </div>
-              <p class="chan-note">Contact details shown are placeholders for launch.</p>
+  <!-- ============ contact ============ -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow">Book a repair</span>
+            <h2 id="contact-h">Tell us what your machine is doing. We'll tell you what it needs.</h2>
+            <p class="lead">
+              Send a message with the symptoms — even "it just won't turn on" is enough to start.
+              You'll get a straight answer and a free quote before anything is opened.
+            </p>
+            <div class="contact-cta-row">
+              <a class="btn btn-primary" href="tel:+639170000000">Call · 0917 000 0000</a>
+              <a class="btn btn-ghost" href="mailto:captm.repair@example.com">Email us</a>
             </div>
           </div>
+          <div>
+            <div class="chan-list">
+              <a class="chan" href="tel:+639170000000">
+                <span class="chan-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                </span>
+                <span><b>Call or text</b><span>0917 000 0000</span></span>
+              </a>
+              <a class="chan" href="mailto:captm.repair@example.com">
+                <span class="chan-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                </span>
+                <span><b>Email</b><span>captm.repair@example.com</span></span>
+              </a>
+              <div class="chan">
+                <span class="chan-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a7 7 0 0 1 14 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                </span>
+                <span><b>Davao City, Philippines</b><span>Drop-off or on-site visits</span></span>
+              </div>
+            </div>
+            <p class="chan-note">Contact details shown are placeholders for launch.</p>
+          </div>
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ============ footer ============ -->
-  <footer class="site-foot">
-    <div class="wrap foot-in">
-      <p>© 2026 CAPTM Repair · Davao City, Philippines. Diagnosis first, price before work, warranty after.</p>
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#why">Why us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <span class="foot-sig">SYS OK · CAPTM ONLINE</span>
     </div>
-  </footer>
+  </section>
 
-</div><!-- /cc-page -->
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <p>© 2026 CAPTM Repair · Davao City, Philippines. Diagnosis first, price before work, warranty after.</p>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="foot-sig">CAPTM Repair · Davao City</span>
+  </div>
+</footer>
 
 <script>
 (function(){
   "use strict";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var page = document.getElementById("cc-page");
-  var boot = document.getElementById("cc-boot");
   var reveals = document.querySelectorAll(".reveal");
 
   function showAllReveals(){
     for (var i = 0; i < reveals.length; i++) reveals[i].classList.add("in");
   }
 
-  if (reduceMotion) {
-    /* no boot theater, no scroll choreography — everything visible and powered */
-    page.classList.add("powered");
-    if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
+  if (reduceMotion || !("IntersectionObserver" in window)) {
     showAllReveals();
     return;
   }
 
-  /* ---- POST / boot sequence ---- */
-  var rows = boot.querySelectorAll(".boot-row");
-  boot.classList.add("on");
-  page.setAttribute("inert", "");
-  var t = 320;
-  for (var r = 0; r < rows.length; r++) {
-    (function(row, delay){
-      window.setTimeout(function(){ row.classList.add("done"); }, delay);
-    })(rows[r], t);
-    t += 240;
-  }
-  window.setTimeout(function(){
-    boot.classList.add("off");
-    page.classList.add("powered");
-    page.removeAttribute("inert");
-  }, t + 320);
-  window.setTimeout(function(){
-    if (boot.parentNode) boot.parentNode.removeChild(boot);
-  }, t + 1100);
-
-  /* ---- scroll reveals ---- */
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function(entries){
-      for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) {
-          entries[i].target.classList.add("in");
-          io.unobserve(entries[i].target);
-        }
+  var io = new IntersectionObserver(function(entries){
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add("in");
+        io.unobserve(entries[i].target);
       }
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    for (var j = 0; j < reveals.length; j++) io.observe(reveals[j]);
-  } else {
-    showAllReveals();
-  }
+    }
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  for (var j = 0; j < reveals.length; j++) io.observe(reveals[j]);
 })();
 </script>
 </body>
